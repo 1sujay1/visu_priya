@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baby Shower Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Baby Shower Function</h1>
+      <header class="header">
+        <img src="images/Heading.png" alt="Baby Shower" class="header-image" />
+      </header>
+      <form id="myForm" action="/submit" method="post">
+        <h1 style="color: green">Guess BOY or GIRL</h1>
+        <div class="form-group">
+          <label for="name">Enter your Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label>Baby Gender:</label>
+          <div class="gender-selection">
+            <label for="boy" class="gender-label">
+              <input
+                type="radio"
+                id="boy"
+                name="babyGender"
+                value="Boy"
+                required
+              />
+              <img src="images/boy.png" alt="Baby Boy" class="gender-image" />
+              <span>Baby Boy</span>
+            </label>
+            <label for="girl" class="gender-label">
+              <input
+                type="radio"
+                id="girl"
+                name="babyGender"
+                value="Girl"
+                required
+              />
+              <img src="images/girl.png" alt="Baby Girl" class="gender-image" />
+              <span>Baby Girl</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+      <p style="text-align: right; font-size: 5px">By Sujay Kumar N</p>
+    </div>
+    <script>
+      //   document
+      //     .getElementById("myForm")
+      //     .addEventListener("submit", function (event) {
+      //       // Replace this condition with your own logic
+      //       //   const shouldSubmit = confirm("Do you want to submit the form?");
+
+      //       //   if (!shouldSubmit) {
+      //       //     event.preventDefault(); // Prevents the form from being submitted
+      //       //     alert("Form submission was cancelled.");
+      //       //   }
+      //       fetch("https://jsonip.com/") // Replace with your API URL
+      //         .then((response) => {
+      //           if (!response.ok) {
+      //             throw new Error("Network response was not ok");
+      //           }
+      //           console.log("response.json()", response.json());
+      //           return response.json();
+      //         });
+      //     });
+    </script>
+  </body>
+</html>
