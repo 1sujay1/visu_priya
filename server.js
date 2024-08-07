@@ -1,7 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const port = 3000;
+require("dotenv").config();
+const port = process.env.PORT || 3000;
 
 const FormSchema = new mongoose.Schema({
   name: String,
@@ -50,7 +51,7 @@ app.get("/api/surveys", async (req, res) => {
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb+srv://admin:admin@cluster0.2sucg.mongodb.net/visupriya", {
+  .connect(process.env.DD_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
